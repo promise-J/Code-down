@@ -1,0 +1,299 @@
+.container{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.switch1{
+    background-color: black;
+    height: 90%;
+    top: 2px;
+    position: absolute;
+    width: 70%;
+    color: white;
+    transform: translateX(20px);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: x-small;
+}
+.switch2{
+    background-color: white;
+    height: 80%;
+    top: 2px;
+    position: absolute;
+    width: 70%;
+    color: black;
+    font-size: x-small;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    /* transition: all 3s; */
+}
+
+
+.theme1{
+    background-color: white;
+    border: 1px solid rgb(218, 213, 213);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 40px;
+    padding: 4px;
+    height: 30px;
+    width: 100px;
+    color: black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* display: none; */
+    /* transition: all 3s; */
+}
+
+main nav .nav .nav-li .nav-li-a{
+    color: purple;
+}
+
+.theme2{
+    background-color: black;
+    border: 1px solid rgb(236, 234, 234);
+    border-radius: 6px;
+    display: flex;
+    /* align-items: center; */
+    position: absolute;
+    top: 30%;
+    right: 40px;
+    padding: 4px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    display: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.container header{
+    width: 100%;
+    position: sticky;
+    min-height: 100px;
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid rgb(214, 210, 210);
+}
+.container header .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.3;
+}
+@keyframes moveGiphy{
+    0%{
+       transform: translateX(0%);
+    }50%{
+        transform: translateX(-100%);
+    }100%{
+        transform: translateX(100%);
+    }
+ }
+
+.container header img{
+    height: 70px;
+    /* transform: translateX(-100px); */
+    animation: moveGiphy infinite 3s;
+}
+
+
+
+.container header div{
+    color: purple;
+    flex: 0.7;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-right: 1px solid rgb(228, 220, 220);
+}
+
+.container main{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.container main nav{
+    /* background-color: yellow; */
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0.4;
+    /* justify-content: center; */
+}
+
+.main .acknowledge{
+    /* background-color: rgb(238, 195, 238); */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0 0 0;
+    column-gap: 10px;
+    height: 400px;
+}
+
+.main .acknowledge .card{
+    display: flex;
+    flex-direction: column;
+    border: rgb(241, 238, 238) 1px solid;
+    animation: 3s all ease-in-out;
+    background-color: rgb(70, 64, 64);
+    transition: all 4s;
+}
+
+.main .acknowledge .card:hover{
+    background-color: rgb(238, 234, 234);
+    color: purple;
+    transform: translateX(20px);
+}
+
+.main .acknowledge .card .img{
+    /* background-color: red; */
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3s;
+}
+.main .acknowledge .card .img img:hover{
+    border-radius: 30%;
+}
+
+.main .acknowledge .card .content{
+    /* background-color: blue; */
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border-left: 1px solid rgb(243, 239, 239);
+    border-right: 1px solid rgb(243, 239, 239);
+    border-bottom: 1px solid rgb(243, 239, 239);
+}
+
+.main .acknowledge .card .img img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    animation: 5s all ease-in;
+}
+
+.container main nav > h4{
+    color: purple;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid purple;
+    padding: 4px;
+}
+
+.container main nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+    padding: 10px;
+}
+
+.container main nav ul li{
+    /* background-color: green; */
+    margin: 10px;
+    /* background-color: red; */
+    padding: 10px;
+    height: 50px;
+    animation: all 6s ease-in;
+}
+
+.container main nav ul li:hover{
+    /* color: white; */
+    /* background-color: rgb(247, 224, 247); */
+}
+/*main class styling here*/
+.container main .main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    flex: 1;
+    border-left: 1px solid rgb(206, 198, 198);
+}
+
+main .main .quiz{
+    margin-bottom: 30px;
+}
+
+.ack{
+    text-align: center;
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+.container main .main .expect{
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.container main .main .expect ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+    padding: 10px;
+}
+
+.container main .main .expect ul li{
+    margin: 10px;
+    padding: 15px 10px;
+    height: 20px;
+    animation: all 6s ease-in;
+    font-size: 20px;
+    animation: 2s all ease-in-out;
+    /* padding-left: 6px; */
+}
+.container main .main .expect ul li:hover{
+    /* background-color: rgb(233, 221, 233); */
+}
+
+main .main .expect .what-expect{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.container footer{
+    border-top: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+

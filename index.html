@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Down</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div>
+                <h1>CODE DOWN BOOT-CAMP</h1>
+            </div>
+            <div class="img">
+                <img src="./image/code 3.gif" alt="code Down">
+            </div>
+        </header>
+
+        <main>
+            <nav class="nav">
+                <h4>we will cover</h4>
+                <ul class="nav-ul">
+                    <li class="nav-li"><a class="nav-li-a" href="day1.html">DAY 1 - INTRODUCTION TO THE WEB (INTERNET)</a></li>
+                    <li class="nav-li"><a class="nav-li-a" href="day2.html">DAY 2 - HTML5 & CSS3</a></li>
+                    <li class="nav-li"><a class="nav-li-a" href="day3.html">DAY 3 - ADVANCE HTML5 & CSS</a></li>
+                    <li class="nav-li"><a class="nav-li-a" href="day4.html">DAY 4 - INTRODUCTION TO JAVASCRIPT</a></li>
+                    <li class="nav-li"><a class="nav-li-a" href="day5.html">DAY 5 - PROJECT & WHAT NEXT?</a></li>
+                </ul>
+            </nav>
+            <section class="main">
+                <div class="theme1">
+                    <button class="switch1">Dark Mode</button>
+                </div>
+                <div class="theme2">
+                    <button class="switch2">Light Mode</button>
+                </div>
+                <!-- <button class="switch-white">Dark theme</button> -->
+                <div class="expect">
+                    <h1 class="what-expect">What to Expect</h1>
+                    <ul>
+                        <li> Learning the basic concepts of programming</li>
+                        <li>Learning the basic of the web language - HTML</li>
+                        <li>Hands on exciting projects</li>
+                        <li>Entanglement with JAVASCRIPT</li>
+                        <li>Live Mentorship and guide</li>
+                        <li>And many more...</li>
+                    </ul>
+                </div>
+                <h1>QUIZ & EXERCISES</h1>
+                <section class="quiz">
+                    <section class="module">
+                        <h2>HTML EXERCISES</h2>
+                        <ul>
+                            <li>first exercises of html</li>
+                            <li>second exercises of html</li>
+                            <li>third exercises of html</li>
+                            <li>fourth exercises of html</li>
+                        </ul>
+                    </section>
+                    <section class="module">
+                        <h2>CSS EXERCISES</h2>
+                        <ul>
+                            <li>first exercises of CSS3</li>
+                            <li>second exercises of CSS3</li>
+                            <li>third exercises of CSS3</li>
+                            <li>fourth exercises of CSS3</li>
+                        </ul>
+                    </section>
+                    <section class="module">
+                        <h2>JAVASCRIPT EXERCISES</h2>
+                        <ul>
+                            <li>first exercises of JAVASCRIPT</li>
+                            <li>second exercises of JAVASCRIPT</li>
+                            <li>third exercises of JAVASCRIPT</li>
+                            <li>fourth exercises of JAVASCRIPT</li>
+                        </ul>
+                    </section>
+                </section>
+                <h1 class="ack">ACKNOWLEDGEMENT</h1>
+                <div class="acknowledge">
+                    <div class="card">
+                        <div class="img">
+                            <img src="./image/rowland.jpeg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="p-ack">Engr. Rowland Ekemezie - Software Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="./image/maazi.jpeg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="p-ack">Mr. Chiama Aluka - Software Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="./image/bishop.jpeg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="p-ack">Mr. Ugochukwu Ekemezie - International Diplomat and Consultant</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Copy right: &copy;</p>
+        </footer>
+    </section>
+
+    <!--javascript for the button theme mode-->
+    <script>
+        const themebtn1 = document.querySelector('.theme1')
+        const module = document.querySelector('.module')
+        const expect = document.querySelector('.expect')
+        const quiz = document.querySelector('.quiz')
+        // const ackText = document.querySelectorAll('.main .acknowledge .card')
+        const expTitle = document.querySelector('.container main .main .expect .what-expect')
+        const nav = document.querySelectorAll('main .nav .nav-li .nav-li-a')
+        const themebtn2 = document.querySelector('.theme2')
+        const switchBtn1 = document.querySelector('.switch1')
+        const switchBtn2 = document.querySelector('.switch2')
+        switchBtn1.addEventListener('click', setBlackTheme)
+        switchBtn2.addEventListener('click', setWhiteTheme)
+        // console.log()
+     function setBlackTheme(){
+         document.body.style.backgroundColor = 'black'
+         expTitle.style.color = 'purple'
+         document.body.style.color = 'white'
+        //  module.style.color = 'white'
+        //  expect.style.color = 'white'
+        //  quiz.style.color = 'white'
+        //  ackText.style.color = 'black'
+         themebtn1.style.backgroundColor = 'white'
+         themebtn1.style.color = 'black'
+         switchBtn1.style.backgroundColor = 'black'
+         switchBtn1.style.color = 'white'
+         themebtn1.style.display = 'none'
+         themebtn2.style.display = 'block'
+         nav.style.color = 'white'
+        }
+
+     function setWhiteTheme(){
+         document.body.style.backgroundColor = 'white'
+         expTitle.style.color = 'inherit'
+         document.body.style.color = 'inherit'
+        // module.style.color = 'black'
+        //  expect.style.color = 'black'
+        //  quiz.style.color = 'black'
+        //  ackText.style.color = 'inherit'
+         themebtn2.style.backgroundColor = 'black'
+         themebtn2.style.color = 'white'
+         switchBtn2.style.backgroundColor = 'white'
+         switchBtn2.style.color = 'black'
+         themebtn2.style.display = 'none'
+         themebtn1.style.display = 'block'
+         nav.style.color = 'inherit'
+         
+     }
+
+
+    </script>
+</body>
+
+</html>
