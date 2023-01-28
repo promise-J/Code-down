@@ -1,3 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* transition: 1s ease-in-out; */
+}
+
 .container{
     /* background-color: blue; */
     display: flex;
@@ -6,8 +13,12 @@
 }
 
 a{
-    text-decoration: none;
-    color: inherit;
+    /* text-decoration: none; */
+    color: red;
+}
+
+a:visited{
+    color: green;
 }
 
 ul{
@@ -60,6 +71,9 @@ ul{
     /* transition: all 3s; */
 }
 
+.container main nav .nav .nav-li:hover {
+    background: red;
+}
 main nav .nav .nav-li .nav-li-a{
     color: purple;
 }
@@ -88,7 +102,9 @@ main nav .nav .nav-li .nav-li-a{
     min-height: 100px;
     display: flex;
     background-color: white;
+    position: fixed;
     border-bottom: 1px solid rgb(214, 210, 210);
+    z-index: 7;
 }
 .container header .img{
     display: flex;
@@ -132,14 +148,47 @@ main nav .nav .nav-li .nav-li-a{
     padding: 30px;
 }
 
+.header-offset{
+    width: 100%;
+    height: 80px;
+}
+
+.menu-btn{
+    position: fixed;
+    top: 30px;
+    left: 10px;
+    background: blue;
+    outline: none;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+.menu-btn:hover{
+    background-color: white;
+    color: blue;
+    border: blue solid 2px;
+}
+
 .container main nav{
-    /* background-color: yellow; */
     margin-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 0.4;
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    background-color: rgb(160, 160, 245);
+    padding: 20px;
     /* justify-content: center; */
+}
+
+.container main nav.show{
+    display: flex;
 }
 
 .main .acknowledge{
@@ -155,14 +204,31 @@ main nav .nav .nav-li .nav-li-a{
     display: flex;
     flex-direction: column;
     border: rgb(241, 238, 238) 1px solid;
-    animation: 3s all ease-in-out;
-    background-color: rgb(70, 64, 64);
+    cursor: pointer;
     transition: all 4s;
 }
 
+.back-to-top{
+    background-color: blue;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    outline: none;
+    border: rgb(140, 140, 240) 3px solid;
+    padding: 8px 19px;
+    color: white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .main .acknowledge .card:hover{
-    background-color: rgb(238, 234, 234);
-    color: purple;
+    /* background-color: rgb(238, 234, 234); */
+    /* color: purple; */
     transform: translateX(20px);
 }
 
@@ -173,9 +239,6 @@ main nav .nav .nav-li .nav-li-a{
     justify-content: center;
     align-items: center;
     transition: 3s;
-}
-.main .acknowledge .card .img img:hover{
-    border-radius: 30%;
 }
 
 .main .acknowledge .card .content{
@@ -219,13 +282,15 @@ main nav .nav .nav-li .nav-li-a{
     margin: 10px;
     /* background-color: red; */
     padding: 10px;
-    height: 50px;
+    min-height: 50px;
     animation: all 6s ease-in;
 }
 
 .container main nav ul li:hover{
-    /* color: white; */
-    /* background-color: rgb(247, 224, 247); */
+    color: white;
+    background-color: rgb(247, 224, 247);
+    background: purple;
+
 }
 /*main class styling here*/
 .container main .main{
@@ -255,6 +320,11 @@ main .main .quiz{
     justify-content: center;
     padding: 20px;
 }
+.container main .main .expect p{
+    font-style: italic;
+    margin: 5px auto;
+    text-decoration: underline;
+}
 .container main .main .expect ul{
     display: flex;
     flex-direction: column;
@@ -263,7 +333,7 @@ main .main .quiz{
     padding: 10px;
 }
 
-.container main .main .expect ul li{
+.container main .main .expect ul li.expect-list{
     margin: 10px;
     padding: 15px 10px;
     height: 20px;
@@ -271,9 +341,6 @@ main .main .quiz{
     font-size: 20px;
     animation: 2s all ease-in-out;
     /* padding-left: 6px; */
-}
-.container main .main .expect ul li:hover{
-    /* background-color: rgb(233, 221, 233); */
 }
 
 main .main .expect .what-expect{
